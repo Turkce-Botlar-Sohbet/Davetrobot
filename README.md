@@ -11,7 +11,7 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
 
 > **_NOT:_**  Botunuz davet bağlantısı oluşturmak istediğiniz kanal veya gruba yönetici olarak eklenmelidir aksi takdirde çalışmaz.
 
-##### Yapılacaklar Listesi
+#### Yapılacaklar Listesi
 -   ~Belirten kanalda veya grupta yasaklandıysa botta yasaklansın.~ `Yapıldı ✓`
 -   [ ] Birden fazla grup veya kanal desteği ekle.
 -   [ ] Veri tabanı oluştur.
