@@ -22,7 +22,7 @@
       "value": "KATIL"
     },
     "BAN_MESSAGE": {
-      "description": "Kullanıcı grup veya kanaldan yasaklandığında botla erişimi kesilir. Kullanmaya çalışırsa aşağıdaki mesajı yollar.",
+      "description": "Kullanıcı grup veya kanaldan yasaklandığında botla erişimi kesilir. Kullanmaya çalışırsa bu mesajı yollar.",
       "value": "<b>Üzgünüm dostum yasaklandın!</b>"
     },
     "URL": {
