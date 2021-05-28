@@ -18,6 +18,6 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
     ✓
     
 ### Yapılacaklar Listesi:
--   ~Belirten kanalda veya grupta yasaklandıysa botta yasaklansın.~ `Yapıldı ✓`
+-   ~Kişi kanalda veya grupta yasaklandıysa botta engellensin.~ `Yapıldı ✓`
 -   [ ] Birden fazla grup veya kanal desteği ekle.
 -   [ ] Veri tabanı oluştur.
