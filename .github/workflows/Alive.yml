@@ -2,7 +2,7 @@ name: Heroku Awake
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/2 * * * *"
 
 jobs:
   build:
@@ -10,7 +10,5 @@ jobs:
 
     steps:
       - uses: mikeesto/heroku-awake@1.0.0
-        env:
-          HEROKU_URL: ${{ URL }}
         with:
-          URL: echo "$HEROKU_URL"
+          URL: ${{secrets.URL}}
