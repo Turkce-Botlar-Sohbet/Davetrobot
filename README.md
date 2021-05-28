@@ -11,7 +11,13 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
 
 > **_NOT:_**  Botunuz davet bağlantısı oluşturmak istediğiniz kanal veya gruba yönetici olarak eklenmelidir aksi takdirde çalışmaz.
 
-#### Yapılacaklar Listesi
+### Faydaları :-
+    ✓ Bağlantınız sürekli olarak yenilenir telegram dışına çıkmaz.
+    ✓ Grup için kullanacaksanız Arap baskını yemezsiniz.
+    ✓ Telif yeme riskini en aza indirir.
+    ✓
+    
+### Yapılacaklar Listesi:
 -   ~Belirten kanalda veya grupta yasaklandıysa botta yasaklansın.~ `Yapıldı ✓`
 -   [ ] Birden fazla grup veya kanal desteği ekle.
 -   [ ] Veri tabanı oluştur.
