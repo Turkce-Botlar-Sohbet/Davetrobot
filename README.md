@@ -9,9 +9,4 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
----
-**NOT**
-
-Botunuz davet bağlantısı oluşturmak istediğiniz kanal veya gruba yönetici olarak eklenmelidir aksi takdirde çalışmaz.
-
----
+> **_NOT:_**  Botunuz davet bağlantısı oluşturmak istediğiniz kanal veya gruba yönetici olarak eklenmelidir aksi takdirde çalışmaz.
