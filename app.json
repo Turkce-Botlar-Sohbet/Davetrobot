@@ -1,0 +1,47 @@
+{
+  "name": "Davetrobot",
+  "description": "Davet bağlantılarını koruyan bir bot.",
+  "repository": "https://github.com/Turkce-Botlar-Sohbet/Davetrobot",
+  "logo": "https://avatars.githubusercontent.com/u/71149025",
+  "keywords": ["telegram", "bot", "davet"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "https://t.me/BotFather adresinden bir bot oluşturarak edinin.",
+      "value": ""
+    },
+    "CHAT_ID": {
+      "description": "Davet bağlantısı oluşturmak istediğiniz kanal veya grubun ID numarası -100 ile başlamalıdır.",
+      "value": "-100111111111"
+    },
+    "START_MESSAGE": {
+      "description": "Bot'a start verildiğinde atılan mesaj.",
+      "value": "🔐"
+    },
+    "BUTTON_MESSAGE": {
+      "description": "Butonun yazısı.",
+      "value": "KATIL"
+    },
+    "BAN_MESSAGE": {
+      "description": "Kullanıcı grup veya kanaldan yasaklandığında botla erişimi kesilir. Kullanmaya çalışırsa aşağıdaki mesajı yollar.",
+      "value": "<b>Üzgünüm dostum yasaklandın!</b>"
+    },
+    "URL": {
+      "description": "Yukarıda app-name yerine yazdığınız adı yourappname ile değiştirin.",
+      "value": "https://yourappname.herokuapp.com/"
+    },
+    "PORT": {
+      "description": "Botun çalıştığı PORT",
+      "value": "80"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  }
+}
