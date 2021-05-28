@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: mikeesto/heroku-awake@1.0.0
         env:
-          URL: ${{ URL }}
+          HEROKU_URL: ${{ URL }}
         with:
-          URL: echo "$URL"
+          URL: echo "$HEROKU_URL"
