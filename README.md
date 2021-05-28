@@ -20,7 +20,7 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
     
 ### Yapılacaklar Listesi:
 -   ~Kişi kanalda veya grupta yasaklandıysa botta engellensin.~ `Yapıldı ✓`
--   [ ] Davet bağlantısını saatte bir otomatik yenile.
+-   [ ] Davet bağlantısını saatte bir otomatik yenilesin.
 -   [ ] Birden fazla grup veya kanal desteği ekle.
 -   [ ] Veritabanı oluştur.
 
