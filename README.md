@@ -2,6 +2,7 @@
 <hr>
 <h2 align="center">Bot Hakkında</h2>
 <h3 align="center">Bu bot her katılımcı için ayrı davet bağlantısı oluşturur ve geçmiş bağlantıları iptal eder bu sayede gizli kanal/grup bağlantınız yayılmaz.</h3>
+<h4 align="center">Örnek Bot: <a href="https://t.me/kanalrobot"><strong>Film Arşivi Giriş »</strong></a></h4>
 
 ### Kurulum
 
