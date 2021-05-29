@@ -14,7 +14,6 @@ bot.catch((err) => {
 // Botun kullanıcı adını alan bir kod.
 bot.telegram.getMe().then(botInfo => {
     bot.options.username = botInfo.username
-    console.log(`Bot Başlatıldı! => ${bot.options.username}`)
 })
 
 // Heroku sitesinde botunuzun kullanıcı adı gözükür -> kanalbot.herokuapp.com
