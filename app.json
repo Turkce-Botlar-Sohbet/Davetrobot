@@ -26,8 +26,9 @@
       "value": "<b>Üzgünüm dostum yasaklandın!</b>"
     },
     "URL": {
-      "description": "Yukarıda app-name yerine yazdığınız adı yourappname ile değiştirin.",
-      "value": "https://yourappname.herokuapp.com/"
+      "description": "Botun Webhook ile çalışmasını istiyorsanız ekleyin. örn: https://yourappname.herokuapp.com/ (Yukarıda app-name yerine yazdığınız adı yourappname ile değiştirin.)",
+      "value": "",
+      "required": false
     },
     "PORT": {
       "description": "Botun çalıştığı PORT",
