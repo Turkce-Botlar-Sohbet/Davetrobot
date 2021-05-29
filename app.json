@@ -10,7 +10,7 @@
       "value": ""
     },
     "CHAT_ID": {
-      "description": "Davet bağlantısı oluşturmak istediğiniz kanal veya grubun ID numarası -100 ile başlamalıdır. Birden fazla eklemek istserseniz aralarında noktalı virgül (;) kullanın",
+      "description": "Davet bağlantısı oluşturmak istediğiniz kanal veya grubun ID numarası -100 ile başlamalıdır. Birden fazla eklemek istserseniz aralarında noktalı virgül (;) kullanın.",
       "value": "-100111111111;-100222222222"
     },
     "START_MESSAGE": {
