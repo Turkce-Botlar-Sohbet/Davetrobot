@@ -2,7 +2,7 @@ const { Telegraf } = require('telegraf')
 
 const BOT_TOKEN     = process.env.BOT_TOKEN || '';
 const PORT          = process.env.PORT || 3000;
-const URL           = process.env.URL || 'https://your-heroku-app.herokuapp.com';
+const URL           = process.env.URL
 
 const bot = new Telegraf(BOT_TOKEN);
 
