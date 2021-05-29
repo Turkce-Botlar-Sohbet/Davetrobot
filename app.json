@@ -40,5 +40,11 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "formation": {
+    "web": {
+      "quantity": 0,
+      "size": "free"
+    }
+  }
 }
