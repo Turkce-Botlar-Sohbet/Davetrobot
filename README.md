@@ -22,7 +22,7 @@ Butona basın kutuları doldurun ve heroku sunucunuza dağıtın.
 -   ~Kişi kanalda veya grupta yasaklandıysa botta engellensin.~ `Yapıldı ✓`
 -   ~Heroku da Webhook seçeneği olsun.~ `Yapıldı ✓`
 -   [ ] Davet bağlantısını saatte bir otomatik yenilesin.
--   [ ] Birden fazla grup veya kanal desteği ekle.
+-   ~Birden fazla grup veya kanal desteği ekle.~ `Yapıldı ✓`
 -   [ ] Veritabanı oluştur.
 
 
