@@ -31,8 +31,9 @@
       "required": false
     },
     "PORT": {
-      "description": "Botun çalıştığı PORT",
-      "value": "80"
+      "description": "Webhook kullanacaksanız bunuda ayarlamanız gerekir aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: 80",
+      "value": "",
+      "required": false
     }
   },
   "buildpacks": [
