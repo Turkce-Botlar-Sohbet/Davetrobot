@@ -22,14 +22,22 @@ const cb = function(req, res) {
     res.end(`${bot.options.username}`)
 }
 
-// Botun webhook ile çalışmasını sağlar.
-bot.launch({
-    webhook: {
-        domain: `${URL}`,
-        port: `${PORT}`,
-        cb
-    }
-})
+if (URL) {
+    // Botun Webhook ile çalışmasını sağlar heroku da URL ayarlayın yeterli.
+    bot.launch({
+        webhook: {
+            domain: `${URL}`,
+            port: `${PORT}`,
+            cb
+        }
+    }).then(() => {
+        console.log(`Bot Start Webhook`)
+    })
+} else {
+    bot.launch().then(() => {
+        console.log(`Bot Start Polling => @${bot.botInfo.username}`)
+    })
+  }
 
 // Bu botumuzu nazikçe durdurmayı etkinleştirir.
 process.once('SIGINT', () => bot.stop('SIGINT'))
