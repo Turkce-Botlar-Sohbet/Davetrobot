@@ -1,4 +1,6 @@
 const Chat = process.env.CHAT_ID.split(';');
+const { Markup } = require('telegraf')
+
 
 module.exports = async (ctx) => {
     if (ctx.chat.type !== 'private') return null;
@@ -7,26 +9,17 @@ module.exports = async (ctx) => {
         if (user.status === 'kicked') {
             await ctx.replyWithHTML(process.env.BAN_MESSAGE)
         } else {
-            for (let i in Chat) {
-                await ctx.telegram.getChat(Chat[i]).then(async function (result) {
-                const chatLink = await ctx.telegram.exportChatInviteLink(Chat[i]);
-                await ctx.replyWithHTML(process.env.START_MESSAGE, {
-                     reply_markup: {
-                        inline_keyboard: [[
-                            {
-                                text: `${result.title}`,
-                                url: `${chatLink}`
-                            }
-                        ]]
-                      }
-                   })
-                })
-              }
-
+            
+            let chatLink = await Promise.all(Chat.map(async (a, i) => {
+                return ctx.telegram.exportChatInviteLink(`${a}`)
+            }))
+            i = 0
+            await ctx.replyWithHTML(
+                process.env.START_MESSAGE,
+                Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g).map(x => [Markup.button.url('k/g ' + ++i, x)])))
          }
 
     } catch (error) {
         console.log(`Error: ${error}`);
     }
 };
-
