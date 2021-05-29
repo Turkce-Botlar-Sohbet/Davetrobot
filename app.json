@@ -31,7 +31,7 @@
       "required": false
     },
     "PORT": {
-      "description": "Webhook kullanacaksanız bunuda ayarlamanız gerekir aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: 80",
+      "description": "Webhook kullanacaksanız bunu da ayarlamanız gerekir aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: 80",
       "value": "",
       "required": false
     }
