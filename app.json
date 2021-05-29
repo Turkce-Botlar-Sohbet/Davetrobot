@@ -26,12 +26,12 @@
       "value": "<b>Üzgünüm dostum yasaklandın!</b>"
     },
     "URL": {
-      "description": "Botun Webhook ile çalışmasını istiyorsanız ekleyin aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: https://yourappname.herokuapp.com/ (Yukarıda app-name yerine yazdığınız adı yourappname ile değiştirin.)",
+      "description": "(İsteğe bağlı) Botun Webhook ile çalışmasını istiyorsanız ekleyin aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: https://yourappname.herokuapp.com/ (Yukarıda app-name yerine yazdığınız adı yourappname ile değiştirin.)",
       "value": "",
       "required": false
     },
     "PORT": {
-      "description": "Webhook kullanacaksanız bunu da ayarlamanız gerekir aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: 80",
+      "description": "(İsteğe bağlı) Webhook kullanacaksanız bunu ayarlamanız gerekir aksi takdirde gerek yoktur boş bırakabilirsiniz. örn: 80",
       "value": "",
       "required": false
     }
