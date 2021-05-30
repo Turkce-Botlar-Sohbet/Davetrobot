@@ -22,7 +22,7 @@ module.exports = async (ctx) => {
             i = 0
             await ctx.replyWithHTML(
                 process.env.START_MESSAGE,
-                Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g).map(x => Markup.button.url(`${getChatTitle[i++]}`, x))))
+                Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g).map(x => [Markup.button.url(`${getChatTitle[i++]}`, x)])))
         }
 
     } catch (error) {
