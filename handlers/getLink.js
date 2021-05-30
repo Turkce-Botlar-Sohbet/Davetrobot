@@ -9,15 +9,21 @@ module.exports = async (ctx) => {
         if (user.status === 'kicked') {
             await ctx.replyWithHTML(process.env.BAN_MESSAGE)
         } else {
-            
+
             let chatLink = await Promise.all(Chat.map(async (a, i) => {
                 return ctx.telegram.exportChatInviteLink(`${a}`)
             }))
+            
+            let getChatTitle = await Promise.all(Chat.map(async (a, i) => {
+                const getChat = await ctx.telegram.getChat(`${a}`)
+                return getChat.title
+            }))
+            
             i = 0
             await ctx.replyWithHTML(
                 process.env.START_MESSAGE,
-                Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g).map(x => [Markup.button.url('k/g ' + ++i, x)])))
-         }
+                Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+/g).map(x => Markup.button.url(`${getChatTitle[i++]}`, x))))
+        }
 
     } catch (error) {
         console.log(`Error: ${error}`);
