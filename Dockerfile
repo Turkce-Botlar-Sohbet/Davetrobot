@@ -1,13 +1,14 @@
-FROM ubuntu:20.04
+FROM node:12-slim
 
 ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json*", "./"]
+COPY package*.json ./
 
 RUN npm install --production
 
 COPY . .
 
 CMD ["bash","start.sh"]
+
