@@ -11,4 +11,3 @@ RUN npm install --production
 COPY . .
 
 CMD ["bash","start.sh"]
-
