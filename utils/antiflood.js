@@ -3,7 +3,7 @@ function AntiFlood() {
 
     this.isFlooding = (userId) => {
         this.users[userId] = (this.users[userId] || 0) + 1
-        return (this.users[userId] >= 2)
+        return (this.users[userId] >= 4)
     }
 
     setInterval(() => {
