@@ -11,20 +11,14 @@ module.exports = async (ctx) => {
             if (user.status === 'kicked') {
                 await ctx.replyWithHTML(process.env.BAN_MESSAGE)
             } else {
-
+                let date = ctx.message.date + 60
                 let chatLink = await Promise.all(Chat.map(async (a, i) => {
-                    return ctx.telegram.exportChatInviteLink(a)
+                    return ctx.telegram.createChatInviteLink(a, { creates_join_request: true, expire_date: date })
                 }))
 
-                let getChatTitle = await Promise.all(Chat.map(async (a, i) => {
-                    const getChat = await ctx.telegram.getChat(a)
-                    return getChat.title
-                }))
-
-                i = 0
-                await ctx.replyWithHTML(
-                    process.env.START_MESSAGE,
-                    Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-\+&?=%.]+/g).map(x => [Markup.button.url(`${getChatTitle[i++]}`, x)])))
+                for (let i of chatLink) {
+                    await ctx.replyWithHTML(i.invite_link)
+                }
             }
 
         } catch (error) {
