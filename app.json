@@ -13,10 +13,6 @@
       "description": "Davet bağlantısı oluşturmak istediğiniz kanal veya grubun ID numarası -100 ile başlamalıdır. Birden fazla eklemek istserseniz aralarında noktalı virgül (;) kullanın.",
       "value": "-100111111111;-100222222222"
     },
-    "START_MESSAGE": {
-      "description": "Bot'a start verildiğinde atılan mesaj.",
-      "value": "🔐"
-    },
     "BAN_MESSAGE": {
       "description": "Kullanıcı grup veya kanaldan yasaklandığında botla erişimi kesilir. Kullanmaya çalışırsa bu mesajı yollar.",
       "value": "<b>Üzgünüm dostum yasaklandın!</b>"
@@ -48,3 +44,4 @@
     }
   }
 }
+
