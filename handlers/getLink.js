@@ -13,12 +13,19 @@ module.exports = async (ctx) => {
             } else {
                 let date = ctx.message.date + 60
                 let chatLink = await Promise.all(Chat.map(async (a, i) => {
-                    return ctx.telegram.createChatInviteLink(a, { creates_join_request: true, expire_date: date })
+                     const invite = await ctx.telegram.createChatInviteLink(a, { creates_join_request: true, expire_date: date })
+                     return invite.invite_link
                 }))
 
-                for (let i of chatLink) {
-                    await ctx.replyWithHTML(i.invite_link)
-                }
+                let getChatTitle = await Promise.all(Chat.map(async (a, i) => {
+                    const getChat = await ctx.telegram.getChat(a)
+                    return getChat.title
+                }))
+
+                i = 0
+                await ctx.replyWithHTML(
+                    process.env.START_MESSAGE,
+                    Markup.inlineKeyboard(`${chatLink}`.match(/(?:(?:https?):\/\/)?[\w/\-?=%.]+\.[\w/\-\+&?=%.]+/g).map(x => [Markup.button.url(`${getChatTitle[i++]}`, x)])))
             }
 
         } catch (error) {
