@@ -6,7 +6,8 @@
   "keywords": ["telegram", "bot", "davet"],
   "env": {
     "BOT_TOKEN": {
-      "description": "https://t.me/BotFather adresinden bir bot oluşturarak edinin.",
+      "description": "https://t.me/BotFather adresinden bir bot oluşturarak edinin. Ya da session_string gir fark etmez. ", 
+
       "value": ""
     },
     "CHAT_ID": {
